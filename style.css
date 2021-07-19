@@ -1,0 +1,286 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #677788;
+  text-align: left;
+  background-color: #fff;
+}
+
+header,
+section,
+footer{
+    padding: 0px 150px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #eeeeee;
+    
+}
+
+.sticky{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+.nav-tittle{
+    list-style-type: none;
+    overflow: hidden;
+    margin: auto 0px;
+    font-size: 1.5rem;
+    
+    text-align: center;
+    text-decoration: none;
+    color: #2062a8;
+}
+
+.nav-tittle:hover{
+    color: #008CBA;
+    transition-duration: 0.3s;
+}
+
+nav{
+    background-color: #eeeeee;
+    padding: 5px 0px;
+    /* overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%; */
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    margin: auto;
+}
+
+nav li{
+    float: right;
+}
+
+nav li a{
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: #677788;
+}
+
+
+nav li a:hover,
+nav li a:active,
+nav li a:focus{
+    border-bottom: 3px solid #969696;
+    transition-duration: 0.3s;
+}
+
+.home-section{
+    display: flex;
+    justify-content: space-between;
+    background-color: #f0f0f04f;
+    margin: auto 0;
+}
+
+.home-section aside{
+    max-width: 700px;
+}
+
+.home-section img{
+    width: 510px;
+    padding: 0px;
+    height: 600px;
+}
+
+.home-section button{
+  background-color: #f0f0f04f; 
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  transition-duration: 0.3s;
+  cursor: pointer;
+  color: #677788; 
+  border: 2px solid #008CBA;
+  border-radius: 10px;
+}
+
+.home-section button:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+.about-section{
+    padding-top: 50px;
+    height: 750px;
+}
+
+.about-title{
+    text-align: center;
+    border-bottom: 3px dotted #d1d1d1;
+    font-size: 2rem;
+    color: #356292;
+}
+
+
+.about-section aside{
+    /* float: right; */
+    width: 50%;
+}
+
+.flex{
+    display: flex;
+    flex-direction: row;
+}
+
+.about-section aside p{
+    margin-top: 0;
+    font-size: larger;
+}
+
+.about-section aside mark{
+    padding: 5px; 
+    background-color: #f88282b9; 
+    border-radius: 15px 2px;
+    color: #500000;
+}
+
+.about-section button{
+  background-color: #f0f0f04f;
+  padding: 14px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.3s;
+  cursor: pointer;
+  color: #677788; 
+  border: 2px solid #008CBA;
+  border-radius: 10px;
+}
+
+.about-section button:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+.skill-section{
+    padding-top: 50px;
+    height: 750px;
+}
+
+.skill-title{
+    text-align: center;
+    border-bottom: 3px dotted #d1d1d1;
+    font-size: 2rem;
+    color: #356292;
+}
+
+.skill-section aside{
+    /* float: right; */
+    width: 50%;
+}
+
+.container {
+  width: 100%;
+  background-color: #ddd;
+}
+
+.skills {
+  text-align: right;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+}
+
+.html {width: 90%; background-color: #04AA6D;}
+.css {width: 80%; background-color: #2196F3;}
+.js {width: 70%; background-color: #f44336;}
+.php {width: 60%; background-color: #808080;}
+
+.project-section{
+    padding-top: 50px;
+    height: 750px;
+}
+
+.project-title{
+    text-align: center;
+    border-bottom: 3px dotted #d1d1d1;
+    font-size: 2rem;
+    color: #356292;
+}
+
+.project-section aside{
+    /* float: right; */
+    width: 50%;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 40%;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  transform: scale(1.05);
+}
+
+.card img {
+  border-radius: 5px 5px 0 0;
+}
+
+.card-body {
+  padding: 2px 16px;
+}
+
+
+
+.contact-section{
+    padding-top: 50px;
+    height: 750px;
+}
+
+.contact-title{
+    text-align: center;
+    border-bottom: 3px dotted #d1d1d1;
+    font-size: 2rem;
+    color: #356292;
+}
+
+.contact-section aside{
+    /* float: right; */
+    width: 50%;
+}
+
+.contact-section input, select, textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+.submit {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+}
