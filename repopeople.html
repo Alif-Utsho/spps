@@ -1,0 +1,59 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+     <link rel="stylesheet" href="stylerepo.css">
+
+     <title>Members</title>
+ </head>
+ <body>
+     <h1 style="text-align: center">MEMBERS</h1>
+     
+     <section id="show"> <button id="grab">Grab</button> <h1 style="text-align:center; margin-top: 50px;">click grab to see members</h1></section>
+
+
+     <script>
+
+        document.getElementById('grab').addEventListener('click', loadm);
+
+        function loadm(){
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'https://api.github.com/users');
+            xhr.onload = function(){
+                if(xhr.status == 200){
+                    var data = JSON.parse(xhr.responseText);
+                    var info = '<ul>' +
+                                '<li> Login: ' + data[5].login + '</li>' +
+                                '<li> Avatar:  <img src= ' + data[5].avatar_url + ' height="100px"/> </li>' +
+                                '</ul> <br>';
+
+                    var infos="";
+                    for(let i=0; i<15; i++){
+                        infos += ' '+
+                            '<div class="card"> '+
+                                '<img src=' + data[i].avatar_url + ' alt="John" style="width:100%"> '+
+                                '<h1> ' + data[i].login + '</h1> '+
+                                '<p class="title"> ' + data[i].type +' &#183;  Id # '+ data[i].id +'</p> '+
+                                '<p>' + data[i].node_id + '</p> '+
+                                // '<a href=' + data[i].html_url + '><i class="fa fa-github"></i></a> '+
+                                '<a href=' + data[i].html_url + '> <i class="fa fa-github" style="font-size: 22px;"></i> &nbsp; Github Profile</a>'+
+                            '</div> '+
+                        ' ';
+
+                        document.getElementById('show').innerHTML = infos;
+                    }
+                }
+                
+            }
+            xhr.send();
+        }
+
+     </script>
+
+ </body>
+ </html>
